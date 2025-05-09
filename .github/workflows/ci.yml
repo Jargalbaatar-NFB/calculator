@@ -24,6 +24,3 @@ jobs:
 
       - name: Тест + JaCoCo + Coverage check
         run: mvn verify
-
-      - name: Тайлан үүсгэх
-        run: mvn jacoco:report
