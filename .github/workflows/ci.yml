@@ -9,6 +9,7 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -21,8 +22,8 @@ jobs:
       - name: Checkstyle шалгах
         run: mvn checkstyle:check
 
-      - name: Тест ба JaCoCo
-        run: mvn test jacoco:check
+      - name: Тест + JaCoCo + Coverage check
+        run: mvn verify
 
       - name: Тайлан үүсгэх
         run: mvn jacoco:report
