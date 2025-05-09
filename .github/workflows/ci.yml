@@ -10,15 +10,19 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+
       - name: JDK 17 тохируулах
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
+
       - name: Checkstyle шалгах
         run: mvn checkstyle:check
+
       - name: Тест ба JaCoCo
         run: mvn test jacoco:check
+
       - name: Тайлан үүсгэх
         run: mvn jacoco:report
