@@ -11,6 +11,12 @@ public class DivisionTest {
         Division calc = new Division();
         assertEquals(2.0, calc.divide(4.0, 2.0), 0.0001);
     }
+    @Test
+void testDivideWithFraction() {
+    Division calc = new Division();
+    assertEquals(2.5, calc.divide(5.0, 2.0), 0.0001);
+}
+
 
     @Test
     void testDivideByZero() {

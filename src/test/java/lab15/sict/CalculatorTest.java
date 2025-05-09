@@ -5,7 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
     Calculator calc = new Calculator();
-
+    @Test
+    void testAddNegative() {
+        assertEquals(-1, calc.add(-2, 1));
+    }
+    
     @Test
     void testAdd() {
         assertEquals(5, calc.add(2, 3));
