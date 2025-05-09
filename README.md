@@ -1,3 +1,3 @@
 # Calculator Project
 
-This project demonstrates Git Workflow with CI integration.
+This project demonstrates Git Workflow with CI integration.# calculator
